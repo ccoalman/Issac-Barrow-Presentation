@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An interactive museum-style exhibit about Isaac Barrow and his place in the history of calculus." />
+  <title>Isaac Barrow — Before Newton</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span id="progressFill"></span></div>
+
+  <header class="topbar">
+    <a class="brand" href="#entrance" aria-label="Return to entrance">
+      <span class="brand-mark">IB</span>
+      <span>THE BARROW EXHIBIT</span>
+    </a>
+    <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="chapterNav">
+      <span></span><span></span>
+      <span class="sr-only">Open chapter menu</span>
+    </button>
+  </header>
+
+  <nav class="chapter-nav" id="chapterNav" aria-label="Exhibit chapters">
+    <p class="nav-label">EXHIBIT MAP</p>
+    <a href="#entrance" data-section="entrance"><span>00</span> Entrance</a>
+    <a href="#portrait" data-section="portrait"><span>01</span> The Man</a>
+    <a href="#timeline" data-section="timeline"><span>02</span> A Life in Motion</a>
+    <a href="#bridge" data-section="bridge"><span>03</span> The Calculus Bridge</a>
+    <a href="#laboratory" data-section="laboratory"><span>04</span> Interactive Gallery</a>
+    <a href="#newton" data-section="newton"><span>05</span> Barrow & Newton</a>
+    <a href="#quiz" data-section="quiz"><span>06</span> Exit Challenge</a>
+    <a href="#sources" data-section="sources"><span>07</span> Sources</a>
+    <p class="nav-hint">Use ← →, wheel, or the room controls</p>
+  </nav>
+
+  <main>
+    <section class="chapter hero" id="entrance" data-title="Entrance">
+      <div class="orbit orbit-one" aria-hidden="true"></div>
+      <div class="orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-grid reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">A DIGITAL MUSEUM EXPERIENCE</p>
+          <h1>Before Newton,<br /><em>there was Barrow.</em></h1>
+          <p class="hero-lead">Step inside the story of the mathematician who connected tangents, areas, and a young Isaac Newton.</p>
+          <a class="primary-button" href="#portrait">Enter the exhibit <span>↓</span></a>
+        </div>
+        <div class="hero-object" aria-hidden="true">
+          <div class="glass-disc">
+            <svg viewBox="0 0 520 520" role="img" aria-label="Animated geometric curve and tangent">
+              <path class="axis" d="M52 420H468M90 468V52" />
+              <path class="curve" d="M90 398 C155 390 194 350 235 288 C286 210 337 121 435 90" />
+              <path class="tangent" d="M155 408 L404 123" />
+              <circle class="point" cx="278" cy="225" r="8" />
+            </svg>
+            <span class="disc-label label-a">TANGENT</span>
+            <span class="disc-label label-b">AREA</span>
+          </div>
+        </div>
+      </div>
+      <p class="room-number">ROOM 00 / ENTRANCE</p>
+    </section>
+
+    <section class="chapter portrait-room" id="portrait" data-title="The Man">
+      <div class="museum-grid reveal">
+        <figure class="portrait-frame">
+          <img src="assets/isaac-barrow.jpg" alt="Portrait of Isaac Barrow by Mary Beale" />
+          <figcaption>Isaac Barrow, painted by Mary Beale · Public domain</figcaption>
+        </figure>
+        <article class="exhibit-copy">
+          <p class="eyebrow">ROOM 01 · THE MAN</p>
+          <h2>A scholar between<br />two mathematical eras.</h2>
+          <p class="large-copy">Isaac Barrow was an English mathematician, classical scholar, and theologian. He became Cambridge’s first Lucasian Professor of Mathematics and taught Isaac Newton.</p>
+          <div class="fact-strip">
+            <div><strong>1630</strong><span>Born in London</span></div>
+            <div><strong>1663</strong><span>Lucasian chair created</span></div>
+            <div><strong>1677</strong><span>Died in London</span></div>
+          </div>
+          <button class="artifact-button" id="noteButton" aria-expanded="false" aria-controls="curatorNote">
+            Open curator’s note <span>+</span>
+          </button>
+          <div class="curator-note" id="curatorNote" hidden>
+            <p>Barrow was not simply “Newton’s teacher.” His work on tangents and geometric quadrature helped make the inverse relationship between differentiation and integration visible before calculus had its modern notation.</p>
+          </div>
+        </article>
+      </div>
+      <p class="room-number">ROOM 01 / THE MAN</p>
+    </section>
+
+    <section class="chapter timeline-room" id="timeline" data-title="A Life in Motion">
+      <div class="timeline-layout reveal">
+        <figure class="timeline-portrait">
+          <img src="assets/isaac-barrow.jpg" alt="Portrait of Isaac Barrow" />
+          <div class="travel-line" aria-hidden="true"><span></span><span></span><span></span></div>
+          <figcaption>London · Cambridge · the Mediterranean</figcaption>
+        </figure>
+
+        <div class="timeline-content">
+          <div class="chapter-heading">
+            <p class="eyebrow">ROOM 02 · A LIFE IN MOTION</p>
+            <h2>From restless student<br />to Cambridge professor.</h2>
+          </div>
+
+          <div class="timeline" role="list">
+            <article class="timeline-card" role="listitem">
+              <span class="year">1630</span>
+              <h3>Born in London</h3>
+              <p>His early schooling was difficult, but he later mastered languages, philosophy, geometry, and optics.</p>
+            </article>
+            <article class="timeline-card" role="listitem">
+              <span class="year">1655–59</span>
+              <h3>A scholar abroad</h3>
+              <p>He travelled through Europe and the Mediterranean, even surviving a pirate attack.</p>
+            </article>
+            <article class="timeline-card" role="listitem">
+              <span class="year">1663</span>
+              <h3>The Lucasian chair</h3>
+              <p>He became Cambridge’s first Lucasian Professor of Mathematics.</p>
+            </article>
+            <article class="timeline-card" role="listitem">
+              <span class="year">1669</span>
+              <h3>Newton succeeds him</h3>
+              <p>Barrow resigned, and the young Isaac Newton took the position.</p>
+            </article>
+            <article class="timeline-card" role="listitem">
+              <span class="year">1670</span>
+              <h3>Geometry in print</h3>
+              <p><em>Lectiones Geometricae</em> collected his work on tangents and areas.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <p class="room-number">ROOM 02 / TIMELINE</p>
+    </section>
+
+    <section class="chapter bridge-room" id="bridge" data-title="The Calculus Bridge">
+      <div class="bridge-layout reveal">
+        <div class="bridge-copy">
+          <p class="eyebrow">ROOM 03 · THE CALCULUS BRIDGE</p>
+          <h2>One curve.<br />Two opposite questions.</h2>
+          <p>Barrow studied a deep connection: the process of finding a tangent and the process of finding an area can undo one another.</p>
+        </div>
+
+        <div class="concept-bridge" aria-label="Relationship between differentiation and integration">
+          <article class="concept-card">
+            <span class="concept-number">A</span>
+            <p class="concept-label">DIFFERENTIATION</p>
+            <h3>How steep?</h3>
+            <p>At a point on a curve, the tangent line reveals the instantaneous slope.</p>
+            <div class="formula">f(x) = x²<br /><strong>f′(x) = 2x</strong></div>
+          </article>
+
+          <div class="bridge-symbol" aria-hidden="true">
+            <span>inverse</span>
+            <div class="double-arrow">⇄</div>
+            <span>processes</span>
+          </div>
+
+          <article class="concept-card">
+            <span class="concept-number">B</span>
+            <p class="concept-label">INTEGRATION</p>
+            <h3>How much?</h3>
+            <p>Across an interval, accumulated slices reveal the area under a curve.</p>
+            <div class="formula">∫x² dx<br /><strong>= x³/3 + C</strong></div>
+          </article>
+        </div>
+      </div>
+      <p class="bridge-caption reveal">This relationship became central to the Fundamental Theorem of Calculus.</p>
+      <p class="room-number">ROOM 03 / THE BRIDGE</p>
+    </section>
+
+    <section class="chapter lab-room" id="laboratory" data-title="Interactive Gallery">
+      <div class="lab-layout reveal">
+        <div class="lab-intro">
+          <p class="eyebrow">ROOM 04 · INTERACTIVE GALLERY</p>
+          <h2>Move the point.<br />Watch calculus change.</h2>
+          <p>Drag the slider to move along <strong>f(x) = x²</strong>. The tangent’s slope and the accumulated area update together.</p>
+          <div class="display-toggle" role="group" aria-label="Choose graph display">
+            <button class="toggle active" data-mode="both">Both</button>
+            <button class="toggle" data-mode="tangent">Tangent</button>
+            <button class="toggle" data-mode="area">Area</button>
+          </div>
+        </div>
+
+        <div class="graph-exhibit">
+          <canvas id="calculusCanvas" width="900" height="470" aria-label="Interactive graph of x squared with a tangent line and shaded area"></canvas>
+          <div class="graph-controls">
+            <label for="xSlider">Point on curve: <strong>x = <span id="xValue">2.0</span></strong></label>
+            <input type="range" id="xSlider" min="0.4" max="3.4" step="0.1" value="2" />
+          </div>
+          <div class="live-readouts" aria-live="polite">
+            <div><span>Tangent slope</span><strong id="slopeValue">4.0</strong><small>f′(x) = 2x</small></div>
+            <div><span>Area from 0 to x</span><strong id="areaValue">2.67</strong><small>∫₀ˣ t²dt = x³/3</small></div>
+          </div>
+        </div>
+      </div>
+      <p class="room-number">ROOM 04 / LABORATORY</p>
+    </section>
+
+    <section class="chapter newton-room" id="newton" data-title="Barrow & Newton">
+      <div class="newton-layout reveal">
+        <div class="quote-monument">
+          <span class="oversized-mark">“</span>
+          <p>Barrow’s geometrical lectures became a starting point for Newton’s work on calculus.</p>
+        </div>
+        <article class="legacy-copy">
+          <p class="eyebrow">ROOM 05 · BARROW & NEWTON</p>
+          <h2>The mentor who<br />recognized the future.</h2>
+          <p>Newton attended Barrow’s lectures and discussed mathematics with him privately. Barrow encouraged his talent and stepped away from the Lucasian chair in 1669, allowing Newton to take the position.</p>
+          <div class="handoff">
+            <div>
+              <span>1663</span>
+              <strong>BARROW</strong>
+              <small>First Lucasian Professor</small>
+            </div>
+            <div class="handoff-line"><span></span><b>THE HANDOFF</b><span></span></div>
+            <div>
+              <span>1669</span>
+              <strong>NEWTON</strong>
+              <small>Second Lucasian Professor</small>
+            </div>
+          </div>
+          <p class="legacy-line">Barrow did not create modern calculus alone—but he helped make Newton’s breakthrough possible.</p>
+        </article>
+      </div>
+      <p class="room-number">ROOM 05 / LEGACY</p>
+    </section>
+
+    <section class="chapter quiz-room" id="quiz" data-title="Exit Challenge">
+      <div class="quiz-shell reveal">
+        <div class="quiz-heading">
+          <p class="eyebrow">ROOM 06 · EXIT CHALLENGE</p>
+          <h2>Three questions<br />before you leave.</h2>
+          <p id="quizProgress">Question 1 of 3</p>
+        </div>
+
+        <div class="quiz-card" id="quizCard">
+          <p class="question-number">QUESTION <span id="questionNumber">01</span></p>
+          <h3 id="questionText">What major idea did Barrow help reveal?</h3>
+          <div class="answers" id="answers"></div>
+          <p class="feedback" id="feedback" aria-live="polite"></p>
+          <button class="next-button" id="nextQuestion" hidden>Next question →</button>
+        </div>
+      </div>
+      <p class="room-number">ROOM 06 / EXIT CHALLENGE</p>
+    </section>
+
+    <section class="chapter sources-room" id="sources" data-title="Sources">
+      <div class="sources-layout reveal">
+        <div>
+          <p class="eyebrow">ROOM 07 · ARCHIVE</p>
+          <h2>Sources & image credit</h2>
+          <p class="archive-copy">This exhibit is based on historical summaries from established mathematics and reference sources.</p>
+        </div>
+        <div class="source-list">
+          <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Barrow/" target="_blank" rel="noreferrer">
+            <span>01</span><div><strong>MacTutor History of Mathematics</strong><small>Biography, timeline, mathematics, and Newton connection</small></div><b>↗</b>
+          </a>
+          <a href="https://www.britannica.com/biography/Isaac-Barrow" target="_blank" rel="noreferrer">
+            <span>02</span><div><strong>Encyclopaedia Britannica</strong><small>Biographical overview and calculus contribution</small></div><b>↗</b>
+          </a>
+          <a href="https://commons.wikimedia.org/wiki/File:Isaac_Barrow_by_Mary_Beale.jpg" target="_blank" rel="noreferrer">
+            <span>03</span><div><strong>Wikimedia Commons</strong><small>Portrait by Mary Beale, public domain</small></div><b>↗</b>
+          </a>
+        </div>
+      </div>
+      <footer>
+        <p>ISAAC BARROW · 1630–1677</p>
+        <a href="#entrance">Return to entrance ↑</a>
+      </footer>
+      <p class="room-number">ROOM 07 / ARCHIVE</p>
+    </section>
+  </main>
+
+  <div class="room-controls" aria-label="Exhibit room navigation">
+    <button id="previousRoom" type="button" aria-label="Previous room">← <span>Previous</span></button>
+    <p><span id="currentRoom">01</span><i></i><span id="totalRooms">08</span></p>
+    <button id="nextRoom" type="button" aria-label="Next room"><span>Next</span> →</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

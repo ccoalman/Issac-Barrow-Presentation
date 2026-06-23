@@ -4,6 +4,7 @@ A full-screen, museum-style history presentation about Isaac Barrow and his role
 
 ## Page Link
 - https://ccoalman.github.io/Issac-Barrow-Presentation/
+
   
 ## Files
 
@@ -11,6 +12,7 @@ A full-screen, museum-style history presentation about Isaac Barrow and his role
 - `style.css` — full-screen room design, responsive layout, and transitions
 - `script.js` — room navigation, calculus graph, curator note, and quiz
 - `assets/isaac-barrow.jpg` — public-domain portrait by Mary Beale
+
 
 ## Presentation controls
 

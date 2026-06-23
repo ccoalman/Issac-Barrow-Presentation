@@ -2,6 +2,9 @@
 
 A full-screen, museum-style history presentation about Isaac Barrow and his role in the development of calculus.
 
+## Page Link
+- https://ccoalman.github.io/Issac-Barrow-Presentation/
+  
 ## Files
 
 - `index.html` — exhibit structure and presentation content
